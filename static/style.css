@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400&display=swap');
+/*
+font-family: 'Amatic SC', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+font-family: 'Teko', sans-serif;
+*/
+body {
+    margin: auto;
+    font-family: 'Titillium Web', sans-serif;
+       
+}
+main{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+h1,h2{
+    text-align: center;
+    width: 100%;
+}
+header {
+    display: flex;    
+    justify-content: space-between;
+    
+}
+
+header h3 {
+    opacity: 0.8;
+    color: #00aef0;
+
+    
+}   
+#calculadora-resico{
+    margin-top: 5rem;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px black;
+    background-color: rgb(119, 119, 167);
+    color: white;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;   
+    
+}
+
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: fit-content;
+    list-style: none;
+    font-weight: 900;
+    cursor: pointer;
+    opacity: 0.9;
+    background-color:black;
+    padding: 0 0.5rem;
+    color:#00aef0;
+    
+
+}
+
+
+#main-nav li a:hover{
+    color:#00aef0;
+}
+
+.sub-nav{
+    display: none;
+    position: absolute;
+    float: left;
+    padding: 1.8rem 0;
+    color: whitesmoke;
+    background-color: black;    
+}
+
+.drop-down{
+    border-right: 3px solid green;
+    padding-right: 1rem;
+    width: 33%;
+    text-align: center;
+}
+
+.drop-down:hover > .sub-nav{
+    display: block;
+    list-style: none;
+        
+    
+}
+
+
+a:link, a:hover, a:visited, a:focus{
+    color: white;
+    text-decoration: none;
+}
+
+span a:link,span a:hover,span a:visited,span a:focus{
+    color:blue;
+}
+.sub-nav a:link{
+    color: whitesmoke;
+    
+}
+
+.sub-nav a:visited{
+    color: whitesmoke;
+}
+
+.sub-nav a:hover{
+    color: #00aef0;
+}
+.sub-nav li:hover{
+    
+    color: #00aef0;
+}
+.sub-nav li::after{
+    content: '( )=>';
+    margin-left: 1rem;
+}
+
+/*FORM CALCULADORA RESICO STYLES*/
+fieldset{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border: none;
+}
+label{
+    width: 50%;
+}
+input{
+    padding: 6px 12px 6px 12px;
+    border: 1px solid #665544;
+    color: black;
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+#btn-submit{
+    width: 50%;
+}
+input[type="submit"]{
+    font-size: 0.7rem;
+    text-align: center;
+
+}
+input[type="submit"]:hover{
+    background-color: #665544;
+    color: white;
+}
+input[type="submit"]:active{
+    background-color: chocolate;
+}
+
+input[type="number"]{
+    color: black;
+}
+input[type="number"]:focus{
+    background-color: blue;
+    color: white;
+    outline-color: white;
+}
+#result{
+    width: 50%;
+}
+
+#isr-cargo{
+    background-color: whitesmoke;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+
+/*OTROS ESTILOS*/
+
+
+
+.anime{
+    color: white;
+    animation: moveright 3s ease-in-out 2s infinite alternate;
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.6rem;
+    /*text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: green;*/
+    text-align: center;
+    border-right: 3px solid green;
+}
+
+@keyframes moveright{
+    from{
+        color: #00aef0;
+    }
+        
+    to{
+        
+        color: whitesmoke;
+    }
+}
+
+
+.lang-icons, .contact-media {
+    width: 50px;
+    cursor: pointer;    
+}
+
+.fa-solid{
+    cursor: pointer;
+}
+.data-project{
+    display: none;
+    flex-direction: column;
+    
+}
+
+.link{
+display: flex;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    color: blue;
+    margin-left: 0;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+
+
+#burger{
+    display: none;
+    width: 2rem;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    
+    
+}
+
+.menu-hidden{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+   
+    
+}
+@media only screen and (max-width: 938px){
+    #calculadora-resico{
+        margin-top: 5rem;
+        width: 70%;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 10px 10px black;
+        color: white;
+    }
+    
+    
+    
+    .contact-media{
+        width: 2rem;
+    }
+
+    .lang-icons{
+        width: 3rem;
+        
+        margin-right: 0.8rem;
+    }
+    
+}
+
+@media only screen and (max-width:575px){
+    #calculadora-resico{
+        margin-top: 5rem;
+        width: 80%;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 10px 10px black;
+        color: white;
+    }
+    #main-nav{
+        display: none;
+        position: relative;
+        background-color: unset;
+        width: 90%;
+    }
+
+    nav{
+        width: 100%;
+        align-items: center;
+        background: #37383C;
+        color: white;
+    }
+
+    .sub-nav{
+        display: none;
+        position: absolute;
+        padding: 0;
+        width: 90vw;
+        left: 0;
+        top: 2.5rem;
+        color: whitesmoke;
+        background-color: black;
+        
+        
+    }
+    
+    
+    #burger{
+        display: flex;
+        margin-bottom: 0.5rem;
+        
+    }
+    header{
+        flex-direction: column;
+        
+    }
+    nav h3{
+        text-align: center;
+        width: 100%;
+        
+        
+    }
+    a:visited{
+        color: whitesmoke;
+    }
+    
+    
+    .contact-media{
+        width: 20px;
+        height: 20px;
+        margin-left: 2rem;
+
+    }
+}
+
+@media only screen and (max-width:474px){
+    #calculadora-resico{
+        margin-top: 5rem;
+        width: 95%;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 10px 10px black;
+        color: white;
+        font-size: 12px;
+    }
+    input[type="submit"]{
+        width: 70%;
+    }
+}
+

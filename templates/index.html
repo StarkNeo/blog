@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section id="calculadora-resico">
+  <h1>RESICO Personas Fisicas</h1>
+  <h2>Calculadora de ISR</h2>
+  <form method="POST" action="/">
+    {{template_form.csrf_token}}
+    <fieldset>
+      {{template_form.periodo}}
+    </fieldset>
+    <fieldset>
+      {{template_form.ingreso.label}}
+      {{template_form.ingreso}}<br>
+    </fieldset>
+    <fieldset>
+      {{template_form.retencion.label}}
+      {{template_form.retencion}}
+    </fieldset>
+    <fieldset>
+      {{template_form.provisionales.label}}
+      {{template_form.provisionales}}
+    </fieldset>
+    <fieldset>
+      <div id="btn-submit">
+        {{template_form.submit}}
+      </div>
+      <input type="number" id="isr-cargo" value={{isr}} disabled>
+    </fieldset>
+  </form>
+
+</section>
+
+
+<script src="../static/script.js"></script>
+{% endblock %}
+
+</html>
