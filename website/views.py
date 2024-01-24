@@ -12,8 +12,9 @@ def index():
     print(form.data)
     if request.method == "POST":
         periodo = request.form.get("periodo")
-        ingreso = int(request.form.get("ingreso"))
-        retencion = int(request.form.get("retencion"))
-        provisionales = int(request.form.get("provisionales"))
-        isr_cargo = int(form.calculo_isr(periodo, ingreso, retencion, provisionales))
+        ingreso = request.form.get("ingreso")
+        retencion = request.form.get("retencion")
+        provisionales = request.form.get("provisionales")
+        calculo = int(form.calculo_isr(periodo, ingreso, retencion, provisionales))
+        isr_cargo =  calculo if calculo>=0 else 0
     return render_template("index.html", template_form=form, isr=isr_cargo)

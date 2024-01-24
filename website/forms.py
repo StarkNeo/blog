@@ -23,16 +23,16 @@ class CalculadoraResico(FlaskForm):
     retencion = IntegerField('Retencion de PM', default=0,validators=[validators.NumberRange(min=0)], render_kw={'id':'retencion'})
     submit = SubmitField('Calcular')
     periodo = RadioField('Periodo de calculo', choices=[('1','Mensual'),('2','Anual')], render_kw={'id':'periodo'}, default='1')
-    provisionales = IntegerField('Pagos realizados',default=0, validators=[DataRequired(),validators.NumberRange(min=0)], render_kw={'id':'provisionales'})
+    provisionales = IntegerField('Pagos realizados',default=0, validators=[DataRequired(),validators.NumberRange(min=0)], render_kw={'id':'provisionales', 'disabled':'true'})
     #resultado = Field('impuesto',render_kw={'disabled':True})
     
-    def calculo_isr(self,periodo, ingreso=0, retencion=0, provisionales=0):
+    def calculo_isr(self,periodo, ingreso, retencion, provisionales):
         if periodo == '1':
             for limite in tabla_mensual:
-                if ingreso <= limite[0]:
-                    return (ingreso * limite[1])-retencion
+                if int(ingreso) <= limite[0]:
+                    return int(ingreso) * limite[1]-int(retencion)
         else:
             for limite in tabla_anual:
-                if ingreso <= limite[0]:
-                    return (ingreso * limite[1])-provisionales
+                if int(ingreso) <= limite[0]:
+                    return int(ingreso) * limite[1]-int(provisionales)
     

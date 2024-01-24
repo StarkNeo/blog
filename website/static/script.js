@@ -15,6 +15,15 @@ document.addEventListener('click', (e) => {
             e.target.value = 0;
             resultadoIsr.value = 0;
             break;
+        case 'periodo':
+            if(e.target.value === '1'){                
+                provisionales.disabled = true;
+                provisionales.value = 0;
+            }
+            else{
+                provisionales.disabled = false;
+            }
+            break;
         default:
             break;
     }
