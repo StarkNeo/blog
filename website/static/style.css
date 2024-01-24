@@ -178,8 +178,22 @@ input[type="number"]:focus{
     color: white;
     outline-color: white;
 }
-#result{
-    width: 50%;
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+th,td{
+    border: 1px solid black;
+    padding: .2em .7em;
+    text-align: right;
+}
+th.left, td.left{
+    text-align: left;
+}
+thead{
+    background-color: rgb(119, 119, 167);
+    color: white;
 }
 
 #isr-cargo{

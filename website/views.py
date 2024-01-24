@@ -9,12 +9,14 @@ views = Blueprint("views", __name__)
 def index():
     form = CalculadoraResico(csrf_enabled=False)
     isr_cargo = 0
-    print(form.data)
     if request.method == "POST":
-        periodo = request.form.get("periodo")
-        ingreso = request.form.get("ingreso")
-        retencion = request.form.get("retencion")
-        provisionales = request.form.get("provisionales")
-        calculo = int(form.calculo_isr(periodo, ingreso, retencion, provisionales))
-        isr_cargo =  calculo if calculo>=0 else 0
-    return render_template("index.html", template_form=form, isr=isr_cargo)
+        data = dict(request.form)
+        periodo = int(data.get("periodo"))
+        ingreso = int(data.get("ingreso"))
+        retencion = int(data.get("retencion"))
+        provisionales = int(data.get('provisionales')) if type(data.get('provisionales')) == 'str' else 0
+        calculo = form.calculo_isr(periodo, ingreso, retencion, provisionales)
+        isr_cargo =  calculo if calculo >0 else 0
+        mensaje =[periodo, ingreso, retencion, provisionales, isr_cargo] 
+        
+    return render_template("index.html", template_form=form, isr=isr_cargo, resultado=mensaje)
