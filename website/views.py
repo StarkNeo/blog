@@ -9,6 +9,7 @@ views = Blueprint("views", __name__)
 def index():
     form = CalculadoraResico(csrf_enabled=False)
     isr_cargo = 0
+    mensaje=[]
     if request.method == "POST":
         data = dict(request.form)
         periodo = int(data.get("periodo"))
