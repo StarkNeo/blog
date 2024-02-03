@@ -1,0 +1,39 @@
+.about{
+    width: 50%;
+}
+.about::first-letter{
+    font-size: large;
+}
+
+#about-foto{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-weight: bold;
+}
+#about-foto::first-letter{
+    font-size: large;
+}
+#foto-perfil{
+    width: 20%;
+    float: left;
+    padding-right: 1rem;
+    border-radius: 10px;
+    
+}
+
+#gif{
+    width: 50%;
+}
+.technologies{
+    border: none;
+}
+.technologies td{
+    border: none;
+    border-bottom: 1px solid green;
+}
+
+#about{
+    width: 50%;
+    text-align: left;
+}

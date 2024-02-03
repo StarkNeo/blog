@@ -127,8 +127,9 @@ span a:link,span a:hover,span a:visited,span a:focus{
     
     color: #00aef0;
 }
+
 .sub-nav li::after{
-    content: '( )=>';
+    /*content: '( )=>';*/
     margin-left: 1rem;
 }
 

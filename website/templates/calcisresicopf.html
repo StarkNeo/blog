@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section id="calculadora-resico">
+  <h1>RESICO Personas Fisicas</h1>
+  <h2>Calculadora de ISR</h2>
+  <form method="POST" action="/calcisresicopf">
+    {{template_form.csrf_token}}
+    <fieldset>
+      {{template_form.periodo}}   
+      <!--<select name="periodo" id="periodo" required>
+        <option value=1>Mensual</option>
+        <option value=2>Anual</option>
+      </select>-->
+    </fieldset>
+    <fieldset>
+      {{template_form.ingreso.label}}
+      {{template_form.ingreso}}<br>
+    </fieldset>
+    <fieldset>
+      {{template_form.retencion.label}}
+      {{template_form.retencion}}
+    </fieldset>
+    <fieldset>
+      {{template_form.provisionales.label}}
+      {{template_form.provisionales}}      
+    </fieldset>
+    <fieldset>
+      <div id="btn-submit">
+        {{template_form.submit}}
+      </div>
+      <input type="number" id="isr-cargo" value={{isr}} disabled>
+    </fieldset>
+  </form>
+  
+</section>
+<h3>{% if resultado[0] == 1 %}
+  {{"Resumen Mensual"}}
+  {% else %}
+  {{"Resumen Anual"}}
+{% endif %}</h3>
+
+<table id="resultado">
+  <thead>
+    <tr>
+      <th>Concepto</th>
+      <th>Monto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ingresos</td>
+      <td>{{resultado[1]}}</td>
+    </tr>
+    <tr>
+      <td>Retenciones</td>
+      <td>{{resultado[2]}}</td>
+    </tr>
+    <tr>
+      <td>Pagos Provisionales</td>
+      <td>{{resultado[3]}}</td>
+    </tr>
+    <tr>
+      <td>ISR por pagar</td>
+      <td>{{resultado[4]}}</td>
+    </tr>
+
+  </tbody>
+  
+</table>
+
+<script src="../static/script.js"></script>
+{% endblock %}
+
+</html>

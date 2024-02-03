@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>ISR Resico PF</h1>
+<article>
+    <h2>QUE ES?</h2>
+    <p>
+        El Régimen Simplificado de Confianza es una simplificación administrativa para que el pago del impuesto
+        sobre la renta (ISR) se realice de forma sencilla, rápida y eficaz. El objetivo de este nuevo esquema es la
+        reducción de las tasas de este impuesto para que las personas que tengan menores ingresos paguen menos, las
+        tasas de este impuesto oscilan entre el 1 y el 2.5% sobre estos ingresos sin deducción alguna. Régimen
+        Simplificado de Confianza (sat.gob.mx)
+    </p>
+    <p>
+        A raíz de la reforma fiscal del 2022 se implemento este nuevo régimen con la finalidad de apoyar a la
+        personas, a la micro, pequeña y mediana empresa con beneficios tales como:
+    </p>
+    <ul class="lista">
+        <li>Calculo automático de impuestos</li>
+        <li>Facilidades Administrativas </li>
+        <li>Bajas tasas de impuesto sobre la renta</li>
+    </ul>
+    <p>
+        A principios del año 2022 muchos contribuyentes que tributaban en regímenes como el de incorporación fiscal,
+        servicios profesionales, entre otros, fueron pasados de manera automática al RESICO derivada de la
+        información que el SAT poseía y sobe la cual se determino que estos cumplían con los requisitos para
+        tributar en este nuevo régimen.
+    </p>
+    <p>
+        Aquellos contribuyentes que deseaban continuar en su régimen, debieron presentar un aviso a la autoridad
+        manifestando su deseo de continuar pagando sus impuestos de la forma que lo venían haciendo.
+    </p>
+    <h2>
+        COMO ENTRAR EN ESTE REGIMEN?
+    </h2>
+    <h3>Quienes pueden aprovechar este beneficio?</h3>
+    <div class="texto-dos-columnas">
+        <div class="columna">
+            <h4>¿Quiénes pueden?</h4>
+            De acuerdo con la ley del impuesto sobre la renta, puedes pagar tus impuestos en este esquema si:
+            <ul class="lista">
+                <li>
+                    Realizas únicamente actividades empresariales, profesionales u otorgas el uso o goce temporal de
+                    bienes.
+                </li>
+                <li>
+                    Si actualmente estas registrado en el SAT, puedes cambiar a este régimen si realizas y pagas tus
+                    impuestos por alguna(s) de las actividades mencionadas anteriormente y si tus ingresos en el
+                    ejercicio anterior no excedieron de 3.5 millones de pesos.
+                </li>
+                <li>
+                    Si vas a realizar por primera vez alguna o algunas de las actividades mencionadas puedes optar por
+                    pagar tus impuestos en este régimen siempre que estimes que tu ingreso o ingresos en conjunto no
+                    excederán de los 3.5 millones de pesos.
+                </li>
+                <li>
+                    Si adicionalmente recibes ingresos por salarios e intereses también puedes pagar tus impuestos en
+                    este régimen siempre y cuando el total de tus ingresos anuales en conjunto no exceda la cantidad
+                    mencionada.
+                </li>
+            </ul>
+        </div>
+        <div class="columna">
+            <h4>¿Quiénes no pueden?</h4>
+            <ul class="lista">
+                <li>Socios, accionistas o integrantes de personas morales o cuando sean partes relacionadas.</li>
+                <li>Residentes en el extranjero con establecimiento permanente en el país.</li>
+                <li>Obtienen ingresos de regímenes fiscales preferentes.</li>
+                <li>Miembros de consejos directivos, de vigilancia, consultivos, administradores, comisarios y gerentes
+                    generales.</li>
+                <li>Quienes presten servicios a un prestatario en las instalaciones de este último, si sus ingresos
+                    representan más del 50% del total de los obtenidos por la prestación de un servicio independiente
+                </li>
+                <li>Si prestas un servicio profesional independiente, pero recibes más del 50% de tus ingresos de un
+                    solo prestatario y los servicios los realizas en las instalaciones de este.</li>
+                <li>Si obtienes honorarios por servicios personales independientes y comunicaste a tu empleador que
+                    deseabas asimilarlos a salarios.</li>
+
+            </ul>
+        </div>
+    </div>
+    <h2>Cuando y como se paga este impuesto</h2>
+    <div class="texto-dos-columnas">
+        <div class="columna">
+            <p>El impuesto se paga de forma mensual a más tardar el 17 del mes inmediato posterior a aquel donde obtuvo sus ingresos, también deberá presentar una declaración anual en el mes de abril del año siguiente al que corresponda la declaración.</p>
+            <h5>Impuesto Mensual</h5>
+            <p>La base para el cálculo de tu impuesto provisional se integrará únicamente de tus ingresos cobrados sin IVA y sin realizar deducción alguna, dicha base deberás identificarla en la siguiente tabla y aplicarle la tasa que te corresponda, el resultado será tu impuesto a pagar.</p>
+            <table class="tabla-isr">
+                <tr>
+                    <td>Monto de los ingresos(pesos mensuales)</td>
+                    <td>Tasa aplicable</td>
+                </tr>
+                <tr>
+                    <td>Hasta 25,000.00</td>
+                    <td>1.00%</td>
+                </tr>
+                <tr>
+                    <td>Hasta 50,000.00</td>
+                    <td>1.10%</td>
+                </tr>
+                <tr>
+                    <td>Hasta 83,333.33</td>
+                    <td>1.50%</td>
+                </tr>
+                <tr>
+                    <td>Hasta 208,333.33</td>
+                    <td>2.00%</td>
+                </tr>
+                <tr>
+                    <td>Hasta 3,500,000.00</td>
+                    <td>2.50%</td>
+                </tr>
+                <tr>
+                    <td colspan="2">*amparados con comprobantes fiscales, efectivamente cobrados y sin impuesto al valor agregado</td>
+                </tr>
+            </table>
+            
+        </div>
+        <div class="columna">
+            <h5>Impuesto Anual</h5>
+            <p>Para determinar el impuesto a pagar en tu declaración anual deberás realizar el mismo procedimiento que usaste en el cálculo mensual, solo que en esta ocasión aplicaras la tabla anual y al impuesto que determines le restaras los pagos provisionales que realizaste durante el ejercicio al que corresponde esta declaración y el que te haya sido retenido por las Personas Morales .</p>
+            <table class="tabla-isr">
+                <tr>
+                    <td>Monto de los ingresos
+                        (pesos anuales)
+                       </td>
+                    <td>Tasa aplicable</td>
+                </tr>
+                <tr>
+                    <td>Hasta 300,000.00</td>
+                    <td>1.00%</td>
+                </tr>
+                <tr>
+                    <td>Hasta 600,000.00</td>
+                    <td>1.10%</td>
+                </tr>
+                <tr>
+                    <td>Hasta 1,000,000.00</td>
+                    <td>1.50%</td>
+                </tr>
+                <tr>
+                    <td>Hasta 2,500,000.00</td>
+                    <td>2.00%</td>
+                </tr>
+                <tr>
+                    <td>Hasta 3,500,000.00</td>
+                    <td>2.50%</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">*amparados con comprobantes fiscales, efectivamente cobrados y sin impuesto al valor agregado</td></tr>
+                    
+            </table>
+            
+        </div>
+    </div>
+    <div class="columna">
+        <h2>Obligaciones por cumplir en este regimen</h2>
+        <ul class="lista">
+            <li>Inscribirse en el RFC</li>
+            <li>Contar con firma electrónica avanzada(FIEL) y tener el buzón tributario activo.</li>
+            <li>Emitir y conservar comprobantes fiscales digitales por los ingresos y gastos que amparan sus operaciones.</li>
+            <li>Presentar sus impuestos provisionales y anual en tiempo y forma</li>
+        </ul>
+    </div>
+
+</article>
+{% endblock %}
