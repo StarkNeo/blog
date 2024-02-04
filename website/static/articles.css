@@ -1,4 +1,8 @@
-article{
+.titulo-articulo{
+    margin-top: 5rem;
+}
+.publicaciones{
+    
     width: 65%;
 }
 
@@ -24,4 +28,15 @@ article{
 
 .tabla-isr td{
     text-align: center;
+}
+
+@media only screen and (max-width:575px){
+    
+    .publicaciones{
+        width: 90%;
+    }
+    .texto-dos-columnas{
+        flex-direction: column;
+    }
+
 }

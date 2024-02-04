@@ -1,5 +1,13 @@
-.about{
+#seccion-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 50%;
+    margin: 5rem auto;
+}
+.about{
+    width: 100%;
+    margin: auto;
 }
 .about::first-letter{
     font-size: large;
@@ -8,7 +16,7 @@
 #about-foto{
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 100%;
     font-weight: bold;
 }
 #about-foto::first-letter{
@@ -23,7 +31,7 @@
 }
 
 #gif{
-    width: 50%;
+    width: 100%;
 }
 .technologies{
     border: none;
@@ -34,6 +42,12 @@
 }
 
 #about{
-    width: 50%;
+    width: 100%;
     text-align: left;
+}
+
+@media only screen and (max-width:575px){
+    #seccion-about{
+        width: 90%;
+    }
 }
