@@ -4,9 +4,18 @@ from .forms import CalculadoraResico
 
 views = Blueprint("views", __name__)
 
+
 @views.route("/",methods=["GET"])
 def home():
     return render_template("index.html")
+
+@views.route("/facalculator", methods=["GET"])
+def facalculator():
+    if request.method == "POST":
+        data= request.form
+        print(data)
+    return render_template("software/facalculator.html")
+
 
 @views.route('/resicopf',methods=['GET'])
 def resicopf():
@@ -28,4 +37,4 @@ def index():
         isr_cargo =  calculo if calculo >0 else 0
         mensaje =[periodo, ingreso, retencion, provisionales, isr_cargo] 
         
-    return render_template("calcisresicopf.html", template_form=form, isr=isr_cargo, resultado=mensaje)
+    return render_template("software/calcisresicopf.html", template_form=form, isr=isr_cargo, resultado=mensaje)
